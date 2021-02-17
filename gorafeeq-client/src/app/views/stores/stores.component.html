@@ -1,0 +1,18 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Store name</th>
+        <th scope="col">Store owner id</th>
+        <th scope="col">Category</th>
+        <th scope="col">Products</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let store of stores">
+        <td scope="row">{{store.store_name}}</td>
+        <td>{{store.store_owner_id}}</td>
+        <td>{{store.category}}</td>
+        <td>{{store.products.length}}</td>
+      </tr>
+    </tbody>
+</table>

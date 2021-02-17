@@ -1,0 +1,4 @@
+// Here you can add other styles
+body > app-dashboard > app-header > button:nth-child(6),body > app-dashboard > app-header > button:nth-child(5){
+    display: none !important;
+}

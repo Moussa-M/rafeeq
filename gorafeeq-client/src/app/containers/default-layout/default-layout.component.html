@@ -1,0 +1,75 @@
+<app-header
+  [navbarBrandRouterLink]="['/dashboard']"
+  [fixed]="true"
+  [navbarBrandFull]="{
+    src: 'assets/img/rafeeq.png',
+    width: 55,
+    height: 55,
+    alt: 'Rafeeq Logo'
+  }"
+  [navbarBrandMinimized]="{
+    src: 'assets/img/rafeeq.png',
+    width: 40,
+    height: 40,
+    alt: 'Rafeeq Logo'
+  }"
+>
+  <ul class="nav navbar-nav ml-auto">
+    <li class="nav-item dropdown" dropdown placement="bottom right">
+      <a
+        class="nav-link"
+        data-toggle="dropdown"
+        href="#"
+        role="button"
+        aria-haspopup="true"
+        aria-expanded="false"
+        dropdownToggle
+        (click)="(false)"
+      >
+        <img src="assets/img/avatar.jpg" class="img-avatar" [alt]="email" />
+      </a>
+      <div
+        class="dropdown-menu dropdown-menu-right"
+        *dropdownMenu
+        aria-labelledby="simple-dropdown"
+      >
+        <h6 class="dropdown-header">{{ name }}</h6>
+        <span
+          *ngIf="isAuthenticated"
+          (click)="auth.logout()"
+          class="dropdown-item"
+          ><i class="fa fa-lock"></i> Logout</span
+        >
+      </div>
+    </li>
+  </ul>
+</app-header>
+<div class="app-body">
+  <app-sidebar
+    #appSidebar
+    [fixed]="true"
+    [display]="'lg'"
+    [minimized]="sidebarMinimized"
+    (minimizedChange)="toggleMinimize($event)"
+  >
+    <app-sidebar-nav
+      [navItems]="navItems"
+      [perfectScrollbar]
+      [disabled]="appSidebar.minimized"
+    ></app-sidebar-nav>
+    <app-sidebar-minimizer></app-sidebar-minimizer>
+  </app-sidebar>
+  <!-- Main content -->
+  <main class="main">
+    <cui-breadcrumb>
+      <li class="breadcrumb-menu d-md-down-none"></li>
+    </cui-breadcrumb>
+
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</div>
+<app-footer>
+  <span><a href="https://gorafeeq.com">Rafeeq</a> &copy; 2021 Rafeeq.</span>
+</app-footer>
