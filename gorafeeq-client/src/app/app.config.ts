@@ -1,5 +1,5 @@
 import { environment } from '../environments/environment';
-const { CLIENT_ID, ISSUER, OKTA_TESTING_DISABLEHTTPSCHECK,SERVER_PORT,BASE_URL,REDIRECT_URI } = environment;
+const { CLIENT_ID, ISSUER, OKTA_TESTING_DISABLEHTTPSCHECK,BASE_URL,REDIRECT_URI } = environment;
 
 export default {
   oidc: {
@@ -12,11 +12,5 @@ export default {
       disableHttpsCheck: `${OKTA_TESTING_DISABLEHTTPSCHECK}`
     }
   },
-  resourceServer: {
-    baseUrl: `http://${BASE_URL}:${SERVER_PORT}/`,
-    ordersUrl: `http://${BASE_URL}:${SERVER_PORT}/api/orders`,
-    storesUrl: `http://${BASE_URL}:${SERVER_PORT}/api/stores`,
-    productsUrl: `http://${BASE_URL}:${SERVER_PORT}/api/products`,
-    usersUrl: `http://${BASE_URL}:${SERVER_PORT}/api/users`,
-  },
+  
 };
