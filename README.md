@@ -1,27 +1,24 @@
 # Rafeeq Simple Dashboard 
 ## Technolgies used 
 - Node
+- expressjs
 - MangoDB
 - Mango Atlas
 - Okta Auth
 - Bootstrap
 - Angular 11
 
-### to run 
-1. Clone the repo
-
-For the server side
+### to run locally
+1. clone the repo
 2. cd gorafeeq-server
 3. npm install
 4. node src/index.js
-
-For the client 
-5. cd gorafeeq-client
+5. open new terminal and cd gorafeeq-client
 6. npm install 
-7. npm run start
+7. npm run start:local
 
 then open the browser on http://localhost:4200
 You will be prompt to login => use the following cred
-username notmybusinessemail@gmail.com
-password Gorafeeq2021
+*username* easy@gmail.com
+*password* Gorafeeq2021
 
