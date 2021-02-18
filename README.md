@@ -17,8 +17,11 @@
 6. npm install 
 7. npm run start:local
 
-then open the browser on http://localhost:4200
+Then open the browser on http://localhost:4200
 You will be prompt to login => use the following cred
 *username* easy@gmail.com
 *password* Gorafeeq2021
+
+Available online on heroku : 
+https://rafeeq.herokuapp.com/ 
 
