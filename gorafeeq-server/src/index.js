@@ -8,8 +8,8 @@ const api = require("./api");
 
 var allowlist = [
   "http://localhost:4200",
-  "https://rafeeq.heroku.com",
-  "https://rafeeq-server.heroku.com",
+  "https://rafeeq.herokuapp.com",
+  "https://rafeeq-server.herokuapp.com",
 ];
 var corsOptionsDelegate = function (req, callback) {
   var corsOptions;
