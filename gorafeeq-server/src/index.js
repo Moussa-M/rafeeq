@@ -31,7 +31,7 @@ const app = express()
 
 mongoose
   .connect(
-    `mongodb+srv://moussa:Smacher129@gorafeeq.haj78.mongodb.net/db?retryWrites=true&w=majority`,
+    `mongodb+srv://XXXX:XXXXXXX@gorafeeq.haj78.mongodb.net/db?retryWrites=true&w=majority`,
     { useNewUrlParser: true }
   )
   .then(() => {
